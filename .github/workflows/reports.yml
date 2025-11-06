@@ -1,0 +1,13 @@
+name: generating_pdf_reports
+on: push
+jobs:
+  pdf_report:
+    runs-on: ubuntu-22.04
+    steps:
+      - run: sudo apt-get install inkscape pandoc texlive-xetex
+      - uses: actions/checkout@v4
+      - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy 
+      - run: python -m nbconvert --to pdf --execute lab1\lab1.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          path: lab1_pint_and_boiling_point.pdf
