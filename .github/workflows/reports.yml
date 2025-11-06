@@ -10,4 +10,4 @@ jobs:
       - run: python -m nbconvert --to pdf --execute lab1/lab1.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: lab1_pint_and_boiling_point.pdf
+          path: lab1/lab1.pdf
