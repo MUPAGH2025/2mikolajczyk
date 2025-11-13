@@ -4,6 +4,7 @@ jobs:
   pdf_report:
     runs-on: ubuntu-22.04
     steps:
+      - run: sudo apt-get update
       - run: sudo apt-get install inkscape pandoc texlive-xetex
       - uses: actions/checkout@v4
       - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy 
