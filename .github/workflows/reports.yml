@@ -22,7 +22,7 @@ jobs:
       - run: sudo apt-get update
       - run: sudo apt-get install -y inkscape pandoc texlive-xetex texlive-fonts-recommended texlive-plain-generic texlive-latex-extra
       - run: pip install ipykernel nbconvert pint open-atmos-jupyter-utils scipy PyMPDATA-examples matplotlib numpy
-      - run: python -m nbconvert --to pdf --execute projekt1/projekt.ipynb
+      - run: python -m nbconvert --to pdf --execute projekt1/Mikolajczyk_Marcin_Projekt.ipynb
       - uses: actions/upload-artifact@v4
         with:
-          path: projekt1/projekt.pdf
+          path: projekt1/Mikolajczyk_Marcin_Projekt.pdf
